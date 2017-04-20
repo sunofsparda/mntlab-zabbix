@@ -12,10 +12,6 @@ yum install -y mariadb mariadb-server
 systemctl start mariadb   # or service mysqld start
 
 # 2.4 Creating initial database  
-# mysql -uroot 
-# mysql> create database zabbix character set utf8 collate utf8_bin; 
-# mysql> grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix';
-# mysql> quit;
 mysql -uroot <<MYSQL_SCRIPT
 create database zabbix character set utf8 collate utf8_bin;
 grant all privileges on zabbix.* to zabbix@localhost identified by 'zabbix';
@@ -35,19 +31,9 @@ zcat /usr/share/doc/zabbix-server-mysql-*/create.sql.gz | mysql --user=zabbix --
 # 3.4 Starting Zabbix server process 
 systemctl start zabbix-server 
 
-
 # 4. Configuring Front-end (httpd)
 # 4.1 Configuring PHP settings  
 /bin/cp /vagrant/zabbix/httpd_zabbix.conf /etc/httpd/conf.d/zabbix.conf
-
-# vi /etc/httpd/conf.d/zabbix.conf
-# php_value max_execution_time 300 
-# php_value memory_limit 128M 
-# php_value post_max_size 16M 
-# php_value upload_max_filesize 2M 
-# php_value max_input_time 300 
-# php_value always_populate_raw_post_data -1 
-# php_value date.timezone Europe/Minsk
 
 # 4.2 Starting Front-end 
 systemctl start httpd

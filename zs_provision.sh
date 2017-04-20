@@ -38,3 +38,13 @@ systemctl start zabbix-server
 # 4.2 Starting Front-end 
 systemctl start httpd
 
+# 5. Configure Zabbix server
+# 5.1 Configuration
+/bin/cp /vagrant/zabbix/zabbix.conf.php /etc/zabbix/web/zabbix.conf.php
+
+# 6. Zabbix Agent
+# 6.1. Installing Zabbix Agent
+yum install -y zabbix-agent
+
+# 6.2. Starting Zabbix Agent service
+systemctl start zabbix-agent

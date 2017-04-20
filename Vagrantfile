@@ -14,17 +14,17 @@ Vagrant.configure("2") do |config|
       zabbix.vm.provider :virtualbox do |vbox|
          vbox.customize ["modifyvm", :id, "--memory", "1024"]
       end
-      zabbix.vm.provision "shell", name: "zabbix server provision", path: "zs_provision.sh"
+      zabbix.vm.provision "shell", name: "zabbix server and agent provision", path: "zs_provision.sh"
     end
 
-    # config.vm.define :tomcat do |tomcat|
-    #   tomcat.vm.host_name = "node.lab"
-    #   tomcat.vm.network "private_network", ip:"192.168.55.51"
-    #   tomcat.vm.provider :virtualbox do |vbox|
-    #     vbox.customize ["modifyvm", :id, "--memory", "1024"]
-    #   end  
-    #   tomcat.vm.provision "shell", name: "zabbix agent provision", path: "za_provision.sh"
-    # end
+    config.vm.define :tomcat do |tomcat|
+      tomcat.vm.host_name = "node.lab"
+      tomcat.vm.network "private_network", ip:"192.168.55.51"
+      tomcat.vm.provider :virtualbox do |vbox|
+        vbox.customize ["modifyvm", :id, "--memory", "1024"]
+      end  
+      tomcat.vm.provision "shell", name: "zabbix agent provision", path: "za_provision.sh"
+    end
 
 
 end

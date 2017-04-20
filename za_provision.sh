@@ -9,4 +9,5 @@ yum install -y zabbix-agent
 /bin/cp /vagrant/zabbix/zabbix_agentd.conf  /etc/zabbix/zabbix_agentd.conf
 
 # 6.3. Starting Zabbix Agent service
+systemctl enable zabbix-agent
 systemctl start zabbix-agent

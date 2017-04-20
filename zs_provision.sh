@@ -9,6 +9,7 @@ yum install -y mariadb mariadb-server
 /usr/bin/mysql_install_db --user=mysql
 
 # 2.3 Starting and enabling mysqld service  
+systemctl enable mariadb
 systemctl start mariadb   # or service mysqld start
 
 # 2.4 Creating initial database  
@@ -29,6 +30,7 @@ zcat /usr/share/doc/zabbix-server-mysql-*/create.sql.gz | mysql --user=zabbix --
 /bin/cp /vagrant/zabbix/zabbix_server.conf /etc/zabbix/zabbix_server.conf
 
 # 3.4 Starting Zabbix server process 
+systemctl enable zabbix-server 
 systemctl start zabbix-server 
 
 # 4. Configuring Front-end (httpd)
@@ -36,6 +38,7 @@ systemctl start zabbix-server
 /bin/cp /vagrant/zabbix/httpd_zabbix.conf /etc/httpd/conf.d/zabbix.conf
 
 # 4.2 Starting Front-end 
+systemctl enable httpd
 systemctl start httpd
 
 # 5. Configure Zabbix server
@@ -47,4 +50,5 @@ systemctl start httpd
 yum install -y zabbix-agent
 
 # 6.2. Starting Zabbix Agent service
+systemctl enable zabbix-agent
 systemctl start zabbix-agent

@@ -15,7 +15,7 @@ I. You should install and configure Zabbix server and agents.
 5. Create custom checks (CPU Load, Memory load, Free space on file systems, Network load)
 6. Create trigger with Severity HIGH, check if it works (Problem/Recovery)
 7. Create Action to inform “Project Owners” if HIGH triggers happen
-8*. Super Task: Configure zabbix to work on the server directly without /zabbix 
+8. *Super Task*: Configure zabbix to work on the server directly without /zabbix 
 http://zabbix-server/zabbix -> http://zabbix-server
 
 II. Using Zabbix UI:

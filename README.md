@@ -9,7 +9,9 @@ Zabbix agents on both VMs, provisioned by Vagrant provisioner
 I. You should install and configure Zabbix server and agents.
 
 1. Create User group “Project Owners”
+- created user 'acherlyonok'
 <img src="report/1.1.png">
+- added user 'acherlyonok' to group 'Project Owners'
 <img src="report/1.2.png">
 2. Create User (example “FirstName LastName”), assign user to “Project Owners”, set email
 3. Add 2nd VM to zabbix: create Host group (“Project Hosts”), create Host in this group, enable ZABBIX Agent monitoring

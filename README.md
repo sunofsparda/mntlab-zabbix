@@ -41,6 +41,17 @@ I. You should install and configure Zabbix server and agents.
 - created custom checks (items)
 <img src="report/1.1.5.2.custom_checks.png">
 
+- CPU Load
+<img src="report/1.1.5.2.1.item_cpu_load.png">
+
+- Memory load
+<img src="report/1.1.5.2.2.item_memory_load.png">
+
+- Free space
+<img src="report/1.1.5.2.3.item_free_space.png">
+
+- Network load
+<img src="report/1.1.5.2.4.item_network_load.png">
 
 6. Create trigger with Severity HIGH, check if it works (Problem/Recovery)
 

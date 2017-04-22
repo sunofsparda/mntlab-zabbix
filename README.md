@@ -61,16 +61,16 @@ I. You should install and configure Zabbix server and agents.
 - expecting issue
 <img src="report/8.1.problems_dashboard.png">
 
-- email configuration
+- view excisting issues
 <img src="report/8.2.problems.png">
 
-- email configuration
+- got email notificaion
 <img src="report/8.3.notification.png">
 
-- email configuration
+- notification about problem
 <img src="report/8.4.notification_problem.png">
 
-- email configuration
+- notification that everything is OK
 <img src="report/8.5.notification_ok.png">
 
 

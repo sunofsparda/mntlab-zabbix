@@ -7,21 +7,40 @@ Vagrantfile to spin up 2 VMs (virtualbox): zabbix server, provisioned by Vagrant
 Zabbix agents on both VMs, provisioned by Vagrant provisioner
 
 I. You should install and configure Zabbix server and agents.
+
 1. Create User group “Project Owners”
+2. Create User (example “FirstName LastName”), assign user to “Project Owners”, set email
 
 - created user 'acherlyonok'
-<img src="report/1.1.png">
+<img src="report/1.users.png">
 
 - added user 'acherlyonok' to group 'Project Owners'
-<img src="report/1.2.png">
+<img src="report/2.groups.png">
 
-2. Create User (example “FirstName LastName”), assign user to “Project Owners”, set email
 
 3. Add 2nd VM to zabbix: create Host group (“Project Hosts”), create Host in this group, enable ZABBIX Agent monitoring
 
+- created host 'Tomcat' and enabled ZABBIX Agent monitoring
+<img src="report/3.1.hosts.png">
+
+- created group 'Project Hosts' and added 'Tomcat' to it
+<img src="report/3.2.host_groups.png">
+
+
 4. Assign to this host template of Linux 
 
+- linked 'Template OS Linux' to 'Tomcat'
+<img src="report/4.host_templates.png">
+
+
 5. Create custom checks (CPU Load, Memory load, Free space on file systems, Network load)
+
+- created apllication 'custom application (CPU Load, Memory load, Free space on file systems, Network load)'
+<img src="report/5.1.applications.png">
+
+- created custom checks (items)
+<img src="report/5.2.custom_checks.png">
+
 
 6. Create trigger with Severity HIGH, check if it works (Problem/Recovery)
 

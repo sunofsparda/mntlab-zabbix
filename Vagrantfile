@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
       tomcat.vm.host_name = "node.lab"
       tomcat.vm.network "private_network", ip:"192.168.55.51"
       tomcat.vm.provider :virtualbox do |vbox|
-        vbox.customize ["modifyvm", :id, "--memory", "1024"]
+        vbox.customize ["modifyvm", :id, "--memory", "512"]
       end  
       tomcat.vm.provision "shell", name: "zabbix agent provision", path: "za_provision.sh"
     end

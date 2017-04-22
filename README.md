@@ -44,7 +44,35 @@ I. You should install and configure Zabbix server and agents.
 
 6. Create trigger with Severity HIGH, check if it works (Problem/Recovery)
 
+- created custom trigger
+<img src="report/6.trigger.png">
+
+
 7. Create Action to inform “Project Owners” if HIGH triggers happen
+
+- created custom action
+<img src="report/7.1.action.png">
+
+- email configuration
+<img src="report/7.2.email_configuration.png">
+
+8. Test
+
+- expecting issue
+<img src="report/8.1.problems_dashboard.png">
+
+- email configuration
+<img src="report/8.2.problems.png">
+
+- email configuration
+<img src="report/8.3.notification.png">
+
+- email configuration
+<img src="report/8.4.notification_problem.png">
+
+- email configuration
+<img src="report/8.5.notification_ok.png">
+
 
 8. *Super Task*: Configure zabbix to work on the server directly without /zabbix 
 http://zabbix-server/zabbix -> http://zabbix-server

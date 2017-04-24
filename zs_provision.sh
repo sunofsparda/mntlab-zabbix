@@ -52,3 +52,7 @@ yum install -y zabbix-agent
 # 6.2. Starting Zabbix Agent service
 systemctl enable zabbix-agent
 systemctl start zabbix-agent
+
+# 7. Zabbix Agent
+# 7.1. Installing Zabbix get and sender
+yum install -y zabbix-get zabbix-sender

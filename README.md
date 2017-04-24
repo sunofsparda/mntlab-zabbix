@@ -126,6 +126,13 @@ II. Working with `zabbix_sender` and `zabbix_get`:
 
 1. Configure the agent for replying to the specific server in passive and active mode.
 
+`cat /etc/zabbix/zabbix_agentd.conf`
+- *active mode*
+<img src="report/2.1.1.1.active_mode.png">
+
+- *passive mode*
+<img src="report/2.1.1.2.passive_mode.png">
+
 2. Use zabbix_sender to send data to server manually (use zabbix_sender with key –vv for maximal verbosity).
 
 #### DESCRIPTION

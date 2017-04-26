@@ -136,7 +136,7 @@ II. Working with `zabbix_sender` and `zabbix_get`:
 
 1. Configure the agent for replying to the specific server in passive and active mode.
 
-- view hostnames of nodes
+- view nodes hostnames 
 <img src="report/2.1.1.1.hostnames.png">
 
 `cat /etc/zabbix/zabbix_agentd.conf`

@@ -1,6 +1,6 @@
 
 <VirtualHost *:80>
-  ServerName zabbix.kuzniatsou.local
+  ServerName server.lab
   DocumentRoot "/usr/share/zabbix"
 
   <Directory "/usr/share/zabbix">

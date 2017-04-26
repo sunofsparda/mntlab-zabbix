@@ -85,7 +85,17 @@ I. You should install and configure Zabbix server and agents.
 <img src="report/1.1.8.5.notification_ok.png">
 
 
-8. *Super Task*: Configure zabbix to work on the server directly without `/zabbix` `http://zabbix-server/zabbix` -> `http://zabbix-server`
+9. *Super Task*: Configure zabbix to work on the server directly without `/zabbix` `http://zabbix-server/zabbix` -> `http://zabbix-server`
+
+- changed httpd zabbix vhost config
+<img src="report/1.1.9.1.zabbix_vhost.png">
+
+- check using `curl`
+<img src="report/1.1.9.2.zabbix_direct.png">
+
+- check using web-browser
+<img src="report/1.1.9.3.zabbix_direct_2.png">
+
 
 II. “Network discovery” configuration using Zabbix UI:
 

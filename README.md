@@ -136,12 +136,18 @@ II. Working with `zabbix_sender` and `zabbix_get`:
 
 1. Configure the agent for replying to the specific server in passive and active mode.
 
-`cat /etc/zabbix/zabbix_agentd.conf`
-- *active mode*
-<img src="report/2.1.1.1.active_mode.png">
+- view hostnames of nodes
+<img src="report/2.1.1.1.hostnames.png">
 
-- *passive mode*
-<img src="report/2.1.1.2.passive_mode.png">
+`cat /etc/zabbix/zabbix_agentd.conf`
+- zabbix-agent in *active mode* at *zabbix server (server.lab)*
+<img src="report/2.1.1.2.1.agent_at_server_active_mode.png">
+
+- zabbix-agent in *active mode* at *tomcat server (node.lab)* 
+<img src="report/2.1.1.2.2.agent_at_tomcat_active_mode.png">
+
+- zabbix-agent in *passive mode* at *zabbix server* and *tomcat server*
+<img src="report/2.1.1.3.passive_mode.png">
 
 2. Use zabbix_sender to send data to server manually (use zabbix_sender with key –vv for maximal verbosity).
 

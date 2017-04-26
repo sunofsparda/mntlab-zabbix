@@ -1,3 +1,7 @@
+# 0.Prepare /etc/hosts
+grep -q -F '192.168.55.200 server.lab' /etc/hosts || echo '192.168.55.200 server.lab' >> /etc/hosts
+grep -q -F '192.168.55.51 node.lab' /etc/hosts || echo '192.168.55.51 node.lab' >> /etc/hosts
+
 # 1.Installing Zabbix Repo
 yum install -y http://repo.zabbix.com/zabbix/3.2/rhel/7/x86_64/zabbix-release-3.2-1.el7.noarch.rpm
 

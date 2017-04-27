@@ -38,6 +38,11 @@ zcat /usr/share/doc/zabbix-server-mysql-*/create.sql.gz | mysql --user=zabbix --
 systemctl enable zabbix-server 
 systemctl start zabbix-server 
 
+# 3.4 Starting Zabbix server process 
+yum install zabbix-java-gateway
+systemctl start zabbix-java-gateway
+systemctl enable zabbix-java-gateway
+
 # 4. Configuring Front-end (httpd)
 # 4.1 Configuring PHP settings  
 /bin/cp /vagrant/zabbix/httpd_zabbix.conf /etc/httpd/conf.d/zabbix.conf

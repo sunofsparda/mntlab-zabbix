@@ -13,9 +13,31 @@ yum install -y zabbix-agent
 /bin/cp /vagrant/zabbix/zabbix_agentd.conf  /etc/zabbix/zabbix_agentd.conf
 
 # 6.3. Starting Zabbix Agent service
-systemctl enable zabbix-agent
 systemctl start zabbix-agent
+systemctl enable zabbix-agent
 
 # 7. Zabbix Agent
 # 7.1. Installing Zabbix get and sender
 yum install -y zabbix-get zabbix-sender
+
+# 8. Tomcat
+# 8.1. Installing Tomcat
+yum install -y tomcat
+systemctl start tomcat
+systemctl enable tomcat
+
+# 8.2. Deploying app
+wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war -O /var/lib/tomcat/webapps/sample.war
+
+# 9
+wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.70/bin/extras/catalina-jmx-remote.jar -O /usr/share/tomcat/lib/catalina-jmx-remote.jar
+
+echo 'JAVA_OPTS="-Djava.rmi.server.hostname=192.168.55.51' >> /etc/tomcat/tomcat.conf
+echo '-Dcom.sun.management.jmxremote' >> /etc/tomcat/tomcat.conf
+echo '-Dcom.sun.management.jmxremote.authenticate=false' >> /etc/tomcat/tomcat.conf
+echo '-Dcom.sun.management.jmxremote.ssl=false"' >> /etc/tomcat/tomcat.conf
+
+echo '<Listener className="org.apache.catalina.mbeans.JmxRemoteLifecycleListener" rmiRegistryPortPlatform="8096" rmiServerPortPlatform="8097" />' >> /etc/tomcat/server.xml
+
+
+systemctl restart tomcat

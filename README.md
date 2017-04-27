@@ -46,3 +46,7 @@ Scenario to test Tomcat availability as well as Application heath
 Configure Triggers to alert once WEB resources become unavailable
 
 For both VMs use vagrant box “sbeliakou/centos-7.3-x86_64-minimal”
+
+
+# Template
+

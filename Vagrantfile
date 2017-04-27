@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     config.vm.define :zabbix do |zabbix|
       zabbix.vm.host_name = "server.lab"
       zabbix.vm.network "private_network", ip:"192.168.55.200"
-      zabbix.vm.network "forwarded_port", guest: 80, host: 8080
+      zabbix.vm.network "forwarded_port", guest: 80, host: 8081
       zabbix.vm.provider :virtualbox do |vbox|
          vbox.customize ["modifyvm", :id, "--memory", "1024"]
       end

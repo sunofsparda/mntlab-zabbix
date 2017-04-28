@@ -32,12 +32,8 @@ wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war -O /var/l
 # 9
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.70/bin/extras/catalina-jmx-remote.jar -O /usr/share/tomcat/lib/catalina-jmx-remote.jar
 
-echo 'JAVA_OPTS="-Djava.rmi.server.hostname=192.168.55.51' >> /etc/tomcat/tomcat.conf
-echo '-Dcom.sun.management.jmxremote' >> /etc/tomcat/tomcat.conf
-echo '-Dcom.sun.management.jmxremote.authenticate=false' >> /etc/tomcat/tomcat.conf
-echo '-Dcom.sun.management.jmxremote.ssl=false"' >> /etc/tomcat/tomcat.conf
-
-echo '<Listener className="org.apache.catalina.mbeans.JmxRemoteLifecycleListener" rmiRegistryPortPlatform="8096" rmiServerPortPlatform="8097" />' >> /etc/tomcat/server.xml
-
+/bin/cp /vagrant/tomcat/tomcat-users.xml /usr/share/tomcat/conf/tomcat-users.xml
+/bin/cp /vagrant/tomcat/server.xml /etc/tomcat/server.xml
+/bin/cp /vagrant/tomcat/tomcat.conf /usr/share/tomcat/conf/tomcat.conf
 
 systemctl restart tomcat

@@ -39,7 +39,8 @@ systemctl enable zabbix-server
 systemctl start zabbix-server 
 
 # 3.4 Starting Zabbix server process 
-yum install zabbix-java-gateway
+yum install -y zabbix-java-gateway
+/bin/cp /vagrant/zabbix/zabbix_java_gateway.conf /etc/zabbix/zabbix_java_gateway.conf
 systemctl start zabbix-java-gateway
 systemctl enable zabbix-java-gateway
 
@@ -66,3 +67,4 @@ systemctl start zabbix-agent
 # 7. Zabbix Agent
 # 7.1. Installing Zabbix get and sender
 yum install -y zabbix-get zabbix-sender
+

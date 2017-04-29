@@ -78,5 +78,23 @@ For both VMs use vagrant box “sbeliakou/centos-7.3-x86_64-minimal”
 - status
 <img src="report/web7.png">
 
-# Template
+# Logs
+
+- created item zabbix server log monitoring
+<img src="report/log1.png">
+
+- logs in Monitoring
+<img src="report/log2.png">
+
+- created trigger
+<img src="report/log3.png">
+
+- expecting problem when agent is not available
+<img src="report/log4.png">
+
+- logs in Monitoring
+<img src="report/log5.png">
+
+- logs in Monitoring
+<img src="report/log6.png">
 

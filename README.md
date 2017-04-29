@@ -69,5 +69,14 @@ For both VMs use vagrant box “sbeliakou/centos-7.3-x86_64-minimal”
 <img src="report/web3.png">
 <img src="report/web4.png">
 
+- created trigger
+<img src="report/web5.png">
+
+- created action
+<img src="report/web6.png">
+
+- status
+<img src="report/web7.png">
+
 # Template
 

@@ -84,6 +84,12 @@ I. You should install and configure Zabbix server and agents.
 - notification that everything is OK
 <img src="report/1.1.8.5.notification_ok.png">
 
+### issues
+
+- issue with notification
+<img src="report/bug1.png">
+<img src="report/bug2.png">
+
 
 9. *Super Task*: Configure zabbix to work on the server directly without `/zabbix` `http://zabbix-server/zabbix` -> `http://zabbix-server`
 

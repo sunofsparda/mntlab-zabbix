@@ -32,6 +32,18 @@ Tasks:
 Configure Zabbix to examine Java parameters via Java Gateway (http://jmxmonitor.sourceforge.net/jmx.html)
 Configure triggers to alert once these parameters changed.
 
+- added JMX
+<img src="report/jmx1.png">
+
+- JMX is working
+<img src="report/jmx2.png">
+
+- created item
+<img src="report/jmx3.png">
+
+- added trigger
+<img src="report/jmx4.png">
+
 
 # WEB
 Testing Infrastructure:
@@ -47,6 +59,15 @@ Configure Triggers to alert once WEB resources become unavailable
 
 For both VMs use vagrant box “sbeliakou/centos-7.3-x86_64-minimal”
 
+- created web scenario
+<img src="report/web1.png">
+
+- added steps
+<img src="report/web2.png">
+
+- web monitoring
+<img src="report/web3.png">
+<img src="report/web4.png">
 
 # Template
 

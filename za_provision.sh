@@ -13,7 +13,7 @@ yum install -y zabbix-agent
 /bin/cp /vagrant/zabbix/zabbix_agentd.conf  /etc/zabbix/zabbix_agentd.conf
 
 # 6.3. Starting Zabbix Agent service
-systemctl start zabbix-agent
+systemctl restart zabbix-agent
 systemctl enable zabbix-agent
 
 # 7. Zabbix Agent
@@ -23,14 +23,22 @@ yum install -y zabbix-get zabbix-sender
 # 8. Tomcat
 # 8.1. Installing Tomcat
 yum install -y tomcat
-systemctl start tomcat
+systemctl restart tomcat
 systemctl enable tomcat
 
 # 8.2. Deploying app
 wget https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war -O /var/lib/tomcat/webapps/sample.war
+wget https://tomcat.apache.org/tomcat-6.0-doc/appdev/sample/sample.war -O /var/lib/tomcat/webapps/sample2.war
 
 # 9
 wget https://archive.apache.org/dist/tomcat/tomcat-7/v7.0.70/bin/extras/catalina-jmx-remote.jar -O /usr/share/tomcat/lib/catalina-jmx-remote.jar
+
+# 3.4 Starting Zabbix server process 
+yum install -y zabbix-java-gateway
+/bin/cp /vagrant/zabbix/zabbix_java_gateway.conf /etc/zabbix/zabbix_java_gateway.conf
+
+systemctl restart zabbix-java-gateway
+systemctl enable zabbix-java-gateway
 
 /bin/cp /vagrant/tomcat/tomcat-users.xml /usr/share/tomcat/conf/tomcat-users.xml
 /bin/cp /vagrant/tomcat/server.xml /etc/tomcat/server.xml
